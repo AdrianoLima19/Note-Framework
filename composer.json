@@ -1,0 +1,29 @@
+{
+  "name": "note/framework",
+  "description": "full-stack php framework following the mvc pattern.",
+  "keywords": [
+    "framework",
+    "note",
+    "mvc"
+  ],
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Adriano",
+      "email": "adrianolima.dev@gmail.com",
+      "role": "developer"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {
+    "php": "^8.2"
+  },
+  "require-dev": {},
+  "autoload": {
+    "psr-4": {
+      "App\\": "app",
+      "Note\\": "framework"
+    }
+  }
+}
