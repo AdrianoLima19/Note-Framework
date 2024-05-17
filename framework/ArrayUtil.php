@@ -44,4 +44,56 @@ class ArrayUtil
     {
         $this->parameters[$key] = $value;
     }
+
+    /**
+     * @param  string $key
+     *
+     * @return void
+     */
+    public function unset(string $key): void
+    {
+        unset($this->parameters[$key]);
+    }
+
+    /**
+     * @return array
+     */
+    public function all(): array
+    {
+        return $this->parameters;
+    }
+
+    /**
+     * @return array
+     */
+    public function keys(): array
+    {
+        return array_keys($this->parameters);
+    }
+
+    /**
+     * @param  array $parameters
+     *
+     * @return void
+     */
+    public function replace(array $parameters = []): void
+    {
+        $this->parameters = $parameters;
+    }
+
+    /**
+     * @return int
+     */
+    public function count(): int
+    {
+        return count($this->parameters);
+    }
+
+    /**
+     * @return \ArrayIterator
+     */
+    public function getIterator(): \ArrayIterator
+    {
+        return new \ArrayIterator($this->parameters);
+    }
 }
